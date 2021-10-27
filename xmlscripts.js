@@ -250,7 +250,8 @@ console.log(finalResult);
     }
 
     function convertMatchTime(dateTime){
-        let d = dateTime.replace(/[^\d.- ]/g, '-');
+        let d = dateTime.replace(" ", "-");
+        d = d.replace("/[^\d.-]/g", "-");
         let d_arr = d.split("-");
         let hours = parseInt(d_arr[3]);
         let d_matchtime = undefined;
